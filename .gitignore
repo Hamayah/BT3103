@@ -1,0 +1,4 @@
+*.pdf
+*.code-workspace
+.gitattributes
+.DS_Store
