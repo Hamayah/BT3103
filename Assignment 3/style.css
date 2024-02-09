@@ -1,0 +1,98 @@
+body {
+  background-color: lightsteelblue;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-container {
+  text-align: center;
+  padding: 0.5vh;
+  color: #2c305d;
+  letter-spacing: 0.08em;
+  font-size: 1.5em;
+}
+
+.subheader-container {
+  color: #2c305c;
+  text-align: center;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+  padding-top: 1vh;
+}
+
+.info-container-form {
+  margin: 0 auto;
+  width: 50%;
+  overflow: hidden;
+  background-color: #e9edf0;
+  color: #2c305c;
+  padding-bottom: 1%;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-container-form #userForm h2 {
+  font-size: 2em;
+  background-color: #2c305c;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  margin-bottom: 1vh;
+}
+
+.info-container-table {
+  margin: 0 auto;
+  width: 50%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #e9edf0;
+}
+
+.info-container-table #table {
+    background-color: #2c305c;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0.5vw;
+}
+
+th {
+  background-color: #2c305d;
+  color: white;
+  border-radius: 5px;
+}
+
+#userForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+label {
+  width: 150px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+input {
+  width: auto;
+}
+
+#savebutton {
+  border-radius: 5px;
+  border: none;
+  background-color: purple;
+  color: #e9edf0;
+  font-size: large;
+  padding: 8px 15px;
+}
