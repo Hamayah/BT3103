@@ -3,13 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CPP</title>
+
+    <title>CPP V-1.0</title>
+
     <link rel="stylesheet" href="style.css" />
+
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ccxt@1.93.4/dist/ccxt.browser.js"></script>
-    <script src="firebase.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/ccxt@1.93.4/dist/ccxt.browser.js"
+    ></script>
+    <script src="firebasefuncs.js" defer></script>
   </head>
   <body>
     <!-- Header -->
@@ -24,56 +30,55 @@
 
         <!-- labels are useful for the user to identify -->
         <div class="input-group">
-          <label for="coin1">Coin Name:</label>
+          <label for="coinName">Coin Name:</label>
           <input
             type="text"
-            id="coin1"
-            required="no"
+            id="coinName"
+            required
             placeholder="Enter Coin"
           /><br /><br />
         </div>
 
         <div class="input-group">
-          <label for="ticker1">Ticker:</label>
+          <label for="tickerName">Ticker:</label>
           <input
             type="text"
-            id="ticker1"
-            required="no"
+            id="tickerName"
+            required
             placeholder="Valid Ticker"
           /><br /><br />
         </div>
 
         <div class="input-group">
-          <label for="buy1">Buy Price:</label>
+          <label for="buyPrice">Buy Price:</label>
           <input
             type="number"
-            id="buy1"
-            required="no"
+            id="buyPrice"
+            required
             placeholder="Buy Price"
           /><br /><br />
         </div>
 
         <div class="input-group">
-          <label for="quant1">Buy Quantity:</label>
+          <label for="buyQuantity">Buy Quantity:</label>
           <input
             type="number"
-            id="quant1"
-            required="no"
+            id="buyQuantity"
+            required
             placeholder="Quantity"
           /><br /><br />
         </div>
 
-        <button id="savebutton" type="button">Save</button>
+        <button id="savebutton" type="button" onclick="saveCoinInfo()">
+          Save
+        </button>
+        <span id="errorMessage">Please fill in all fields</span>
       </form>
-    </div>
-
-    <!-- Current Portfolio -->
-    <div class="subheader-container">
-      <h2>Current Portfolio</h2>
     </div>
 
     <!-- Table  -->
     <div class="info-container-table">
+      <h2>Current Portfolio</h2>
       <table id="table">
         <tr>
           <th>S. No</th>
@@ -90,7 +95,7 @@
 
     <!-- Profit -->
     <div class="subheader-container">
-      <h2>Your Total Profit is: XXX</h2>
+      <h2 id="totalProfit">Total Profit: $XX</h2>
     </div>
   </body>
 </html>
