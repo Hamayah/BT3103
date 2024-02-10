@@ -5,7 +5,6 @@ body {
 
 .header-container {
   text-align: center;
-  padding: 0.5vh;
   color: #2c305d;
   letter-spacing: 0.08em;
   font-size: 1.5em;
@@ -17,7 +16,6 @@ body {
   text-align: center;
   font-size: 1.3em;
   letter-spacing: 0.05em;
-  padding-top: 1vh;
 }
 
 .info-container-form {
@@ -32,7 +30,6 @@ body {
 }
 
 .info-container-form #userForm h2 {
-  font-size: 2em;
   background-color: #2c305c;
   color: white;
   width: 100%;
@@ -76,7 +73,7 @@ label {
   font-size: large;
   padding: 8px 15px;
   transition: 0.3s;
-  margin-top: 2.5vh;
+  margin-top: 1vh;
 }
 
 #savebutton:hover {
@@ -98,11 +95,10 @@ label {
   border-radius: 15px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   background-color: #e9edf0;
-  margin-top: 5vh;
+  margin-top: 3vh;
 }
 
 .info-container-table h2 {
-  font-size: 2em;
   text-align: center;
   background-color: #2c305d;
   color: white;

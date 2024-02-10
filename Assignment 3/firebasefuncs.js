@@ -26,7 +26,7 @@ async function saveCoinInfo() {
     buyPrice === "" ||
     buyQuantity === ""
   ) {
-
+    console.log("All details are not filled")
     document.getElementById("errorMessage").style.display = "block";
     return;
   }
@@ -113,10 +113,23 @@ async function displayCoinInfo() {
         buyQuantity
       ).toFixed(2);
 
+      if (cell7.innerHTML < 0) {
+        cell7.style.color = "red";
+      } else {
+        cell7.style.color = "green";
+      }
+
       totalProfit += parseFloat(cell7.innerHTML);
 
-      document.getElementById("totalProfit").innerHTML =
-        "Total Profit: $" + String(totalProfit.toFixed(2));
+      if (totalProfit < 0) {
+        document.getElementById("profitText").style.color = "red";
+        document.getElementById("profitText").innerHTML =
+          "-$" + String(totalProfit.toFixed(2).slice(1));
+      } else {
+        document.getElementById("profitText").style.color = "green";
+        document.getElementById("profitText").innerHTML =
+          "$" + String(totalProfit.toFixed(2));
+      }
 
       console.log("Ticker:", tickerName);
       console.log("Current Price:", cell6.innerHTML);
