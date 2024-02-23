@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ccxt": "^4.2.49",
     "firebase": "^10.8.0",
     "vue": "^3.4.15"
   },
