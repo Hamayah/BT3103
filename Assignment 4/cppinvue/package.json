@@ -11,7 +11,8 @@
   "dependencies": {
     "ccxt": "^4.2.49",
     "firebase": "^10.8.0",
-    "vue": "^3.4.15"
+    "vue": "^3.4.15",
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.3",
