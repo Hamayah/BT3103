@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
     <router-link to="/"> Home </router-link> |
-    <router-link to="/about"> About </router-link>
+    <router-link to="/about"> About </router-link> |
+    <router-link to="/profit"> Profit </router-link>
   </div>
   <router-view />
 </template>
@@ -23,7 +24,7 @@ body {
 }
 
 #nav {
-  padding: 1vw;
+  padding-top: 1vw;
 }
 
 #nav a {
@@ -36,16 +37,4 @@ body {
   color: #2c305d;
   font-weight: bold;
 }
-
-/* body {
-  background-color: lightsteelblue;
-  font-family: "Poppins", sans-serif;
-}
-
-.header-container {
-  text-align: center;
-  color: #2c305d;
-  letter-spacing: 0.08em;
-  font-size: 1.5em;
-} */
 </style>

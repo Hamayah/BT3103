@@ -147,6 +147,13 @@ export default {
 
 <style>
 /*---------------------- Current Portfolio ----------------------*/
+.subheader-container {
+  color: #2c305c;
+  text-align: center;
+  font-size: 1.3em;
+  letter-spacing: 0.05em;
+}
+
 .info-container-table {
     margin: 0 auto;
     width: 60%;

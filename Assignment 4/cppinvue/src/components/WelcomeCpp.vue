@@ -15,6 +15,6 @@ export default {
     text-align: center;
     color: #2c305d;
     letter-spacing: 0.08em;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 </style>
