@@ -1,31 +1,32 @@
 <template>
-    <NavBar />
-    <h3 id="profit">This is Profit Page</h3>
-    <ProfitDisplay />
-    <Logout />
+    <div v-if="user">
+        <NavBar />
+        <h3>Page not found!</h3>
+        <h4>Please click on the available options above</h4>
+        <Logout />
+        <br>
+    </div>
 </template>
 
 <script>
 import firebase from '@/firebase.js';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import NavBar from '@/components/NavBar.vue';
-import ProfitDisplay from '@/components/ProfitDisplay.vue';
 import Logout from '@/components/Logout.vue';
 
 export default {
-    name: 'OnlyProfit',
+    name: 'NotFound',
+
+    components: {
+        NavBar,
+        Logout,
+    },
 
     data() {
         return {
             user: false,
             useremail: ''
         }
-    },
-
-    components: {
-        NavBar,
-        ProfitDisplay,
-        Logout
     },
 
     mounted() {
@@ -39,11 +40,3 @@ export default {
     }
 }
 </script>
-
-<style>
-#profit {
-    color: #2c305d;
-    font-size: 1.5em;
-    margin-top: 1em;
-}
-</style>

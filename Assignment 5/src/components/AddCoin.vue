@@ -34,21 +34,37 @@
 </template>
 
 <script>
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import firebaseApp from "../firebase.js";
 import { getFirestore } from "firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
 const db = getFirestore(firebaseApp);
 
-
 export default {
+    data() {
+        return {
+            user: false,
+        }
+    },
+
+    mounted() {
+        const auth = getAuth();
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                this.useremail = auth.currentUser.email;
+                this.user = user;
+            }
+        });
+    },
+
     methods: {
         async saveCoinInfo() {
             console.log("In Add Coin function");
 
-            let coinName = document.getElementById("coinName").value;
-            let tickerName = document.getElementById("tickerName").value;
-            let buyPrice = document.getElementById("buyPrice").value;
-            let buyQuantity = document.getElementById("buyQuantity").value;
+            this.coinName = document.getElementById("coinName").value;
+            this.tickerName = document.getElementById("tickerName").value;
+            this.buyPrice = document.getElementById("buyPrice").value;
+            this.buyQuantity = document.getElementById("buyQuantity").value;
             console.log(coinName, tickerName, buyPrice, buyQuantity);
 
             if (
@@ -62,15 +78,15 @@ export default {
                 return;
             }
 
-            alert("Saved data for Coin: " + coinName);
+            alert("Saved data for Coin: " + this.coinName);
             
             try {
                 console.log("In try block");
-                const docRef = await setDoc(doc(db, "Portfolio", coinName), {
-                    Coin: coinName,
-                    Ticker: tickerName,
-                    BuyPrice: buyPrice,
-                    BuyQuantity: buyQuantity,
+                const docRef = await setDoc(doc(db, String(this.useremail), this.coinName), {
+                    Coin: this.coinName,
+                    Ticker: this.tickerName,
+                    BuyPrice: this.buyPrice,
+                    BuyQuantity: this.buyQuantity,
                 });
                 console.log(docRef)
                 document.getElementById('userForm').reset();
