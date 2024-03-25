@@ -86,6 +86,8 @@ export default {
                     profit: profit.toFixed(2)
                 });
 
+                console.log("Displaying Data for: ", documentData.Ticker)
+
                 index++;
             }
 

@@ -51,3 +51,11 @@ export default {
     }
 }
 </script>
+
+<style>
+h3 {
+    color: #2c305d;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+</style>
