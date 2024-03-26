@@ -27,3 +27,5 @@ npm run dev
 ```sh
 npm run build
 ```
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/integration/start/deploy?repository=repository_url)
