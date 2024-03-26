@@ -9,11 +9,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-      'node:http': 'empty',
-      'node:https': 'empty',
-      'node:net': 'empty',
-      'node:tls': 'empty',
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }
 })
