@@ -28,4 +28,4 @@ npm run dev
 npm run build
 ```
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/integration/start/deploy?repository=repository_url)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/integration/start/deploy?repository=[repository_url](https://github.com/Hamayah/BT3103/tree/main/Assignment%205))
